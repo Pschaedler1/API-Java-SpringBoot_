@@ -1,6 +1,6 @@
 FROM maven:eclipse-temurin AS build
 WORKDIR /app
-COPY . .
+COPY api-sample/..
 RUN mvn clean package -DskipTests
 
 FROM eclipse-temurin:21.0.6_7-jre-ubi9-minimal
